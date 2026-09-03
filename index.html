@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=stylesheet href="style.css">
+  <title>Velora Esencias — Catálogo de Perfumería</title>
+  <meta name="description" content="Velora Esencias — Fragancias árabes, de diseñador, nicho y body splash. Consultá precios y disponibilidad.">
+</head>
+<body>
+  <header class="container">
+    <div class="crest">⚜️</div>
+    <h1>VELORA ESENCIAS</h1>
+    <div class="tagline">CATÁLOGO DE PERFUMERÍA</div>
+    <p>Fragancias seleccionadas. Árabes • Diseñador • Nicho</p>
+    <div class="chips">
+      <span class="chip">Árabes</span><span class="chip">Diseñador</span><span class="chip">Nicho</span>
+      <span class="chip">Body Splash</span>
+    </div>
+    <p>Consultanos por precios y disponibilidad.</p>
+  </header>
+
+  <div class="search">
+    <div class="container">
+      <input id="search" type="search" placeholder="🔎 Buscar perfume o marca...">
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="section" id="arabes">
+      <div class="section-title"><span>⚔️</span><h2>PERFUMERÍA ÁRABE</h2></div>
+      <div id="arabic"></div>
+    </section>
+
+    <section class="section" id="disenador">
+      <div class="section-title"><span>♠️</span><h2>PERFUMERÍA DE DISEÑADOR</h2></div>
+      <div id="designer"></div>
+    </section>
+
+    <section class="section" id="nicho">
+      <div class="section-title"><span>♛</span><h2>PERFUMERÍA NICHO</h2></div>
+      <div id="niche"></div>
+    </section>
+
+    <section class="section" id="body">
+      <div class="section-title"><span>✨</span><h2>BODY SPLASH</h2></div>
+      <div id="bodySplash"></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>⚜️ VELORA ESENCIAS ⚜️</strong>
+    <div class="note">ÁRABES | DISEÑADOR | NICHO</div>
+    <div class="note">Fragancias que dejan presencia.</div>
+    <div class="note">📲 Consultanos por precio y disponibilidad.</div>
+  </footer>
+
+<script>
+const catalogs = {
+arabic: {
+"LATTAFA": ["Asad","Asad Bourbon","Asad Zanzibar","Asad Zanzibar Edición Limitada","Antique","Al Jawhara","Angham","Ansaam Gold","Ajwad","Affef","Atheeri","Al Qiam Gold","Ameer Al Oudh","Art of Universe","Atlas","Badee Al Oud Honor & Glory","Badee Al Oud For Glory","Badee Al Oud Sublime","Badee Al Oud Noble Blush","Badee Al Oud Amethyst","Confidential Private Gold","Eclaire","Emaan","Emeer","Fakhar Silver","Fakhar Extrait","Fakhar Rose","Fakhar Platin","Her Confession","His Confession","Haya","Hayaati Al Maleky","Hayaati Black","Khamrah","Khamrah Dukhan","Khamrah Qawah","Liam Blue","Liam Grey","Mayar","Mayar Cherry","Mayar Natural Intense","Mashrabya","Mahir Black","Mahir Legacy","Musamam","Toreau de Combat","Jasoor","Pure Crystal","Sherif","Musamam Black Int","Ana Abiyedh Coral","Sondos","Angham Second Song","Hayaati Gold Elixir","Dream of Haze","Give Me Gourmand (Lila)","Dinasty","Khamrah Waha","Eternal Oud"],
+"MAISON ALHAMBRA": ["Jean Lowe Inmortal","Jean Lowe Ombre / Noir","Jean Lowe Vibe","Your Touch Intense","Eternal Touch","Pacific Blue","Dark Aoud","Fabulo Intense","Smoky Touch","Philos Pura","Exclusif Oud","Exclusif Tabac","Delilah","Glacier Bold","Lovely Cherie","Extravagant Lover","Sceptre Malachite","Sceptre Desert","Olivia","La Vivacite","Candid Tonight","Galactic Men Intense","Salvo Elixir","Salvo EDP","Salvo Intense","Black Origami","Philos Rosso","Bad Femme","Smoked Oud & Vainilla","True Word","Rose Petals","Rose Seduction VIP","Avant Silk","Toro Pour Homme Glace","Luxe Nightlife","Luxe Street","Infini Intoxicated Cherry","Tonic Malt","Your Touch Extrait","In Perfect Harmony","No. 2 Men","Decadent Dream","Opera Rouge","Dark Door Intense"],
+"ARMAF": ["Club de Nuit Intense Man","Club de Nuit Intense Woman","Club de Nuit Woman","Club de Nuit Sillage","Club de Nuit Iconic","Club de Nuit Milestone","Club de Nuit Untold","CDN Urban Man Elixir","Club de Nuit Maleka","Club de Nuit Oud","Scentasy","Beach Party","Odyssey Mandarin Sky","Odyssey Homme","Odyssey White","Odyssey Aqua","Odyssey Mega","Odyssey Mega 200 ml","Odyssey Limoni","Odyssey Candee","Odyssey Artisto","Odyssey Go Mango","Odyssey Bahamas","Odyssey Chocolate","Odyssey Mashmellow","Odyssey Mandarin Sky Elixir","Odyssey Mandarin Sky 200 ml","Check Mate Queen","Check Mate King","X Christian Provenzano III","Infinity","Dubai Night Midnight","SHK I","SHK II","Yum Yum","Island Bliss","Precieux I","Precieux IV","Lions Club Monarque","Dunescape","Uniq Forever Elixir","Uniq Effects of Uniq"],
+"AFNAN": ["Edict Amberythme","Edict Ouddiction","Turathi Blue","Turathi Brown","9 AM Pour Femme","9 PM Pour Femme","9 PM Rebel","9 PM","9 PM Elixir","9 AM Dive","9 PM Night Out","Supremacy Collectors","Rare Reef","Rare Carbon"],
+"AL HARAMAIN": ["Amber Oud Gold 200 ml","Amber Oud Gold 999.9 75 ml","Amber Oud Gold 120 ml","Amber Oud Gold 60 ml","Dubai Night 100 ml","Aqua Dubai 100 ml","Exclusif Classic 60 ml","Ultra Violet 120 ml","Private Edition 60 ml","Detour Noir","Detour Noir Eco","Detour Noir Exclusif","Conception","Harmony"],
+"ORIENTICA": ["Amber Rouge","Royal Bleu","Velvet Gold","Royal Amber","XO Xclusif Bleu","XO Xclusif Classic","Gift Set Oud Saffron","Areej Oud Anaqa","Nayaat XLNC Imperium 200 ml"],
+"RASASI": ["La Yuqawan Pour Homme","Dareej Pour Homme","Shurah Pour Homme","Hawas Kobra","Hawas For Him","Hawas Verde","Hawas Malibu","Hawas Tropical","Hawas Black","Hawas Elixir","Hawas Ice","Hawas Fire","Hawas Diva"],
+"FRENCH AVENUE": ["Liquid Brun","Azzure Oud","Cocoa Morado","Liquid Brun Ed. Lim. 150 ml","Vulcan Black Friday","Vulcan Feu","Veneno Bianco","Aether Atlantis","El Dorado","Spectre Ghost","Royal Blend Sequoia","Fierte","Veneno Black","Amber Empire","Thunder","Marmara"],
+"PARIS CORNER": ["Farah","Voux Zingy","Prodigy","North Stag Neuf IX"],
+"SWISS ARABIAN": ["Cardamon and Apple","Shaghaf Amber Infusion","Tobacco 01","Incense 01","Vanilla 01"],
+"ARABIYAT": ["La Di Da - Masc","Ramad","Bois Blanc","Al Najah","Noire Absolu","Mahd Al Dhahab"],
+"AJMAL": ["Crimson Santal","Oud Allure","Aurum Summer"],
+"ASDAAF": ["Ameerat Al Arab"],
+"AL WATANIAH": ["Durrat Al Aroos","Amnia","Kayaan Classic"],
+"ARD AL ZAAFARAN": ["Al Dirgham Special Edit","Oud 24 Hours","Manaal"],
+"ZIMAYA": ["Sharaf The Club"],
+"FRAGRANCE WORLD": ["Ceaser Giovanni Lorenzi"],
+"MATIN MARTIN": ["Santorini","Shahama","Crown","Jameela"],
+"RAYHAAN": ["Tropical Vibe","Elixir","Italia","Jungle Vibe","Aquatica","Terra"],
+"EMPER": ["Stallion 53","Phantom My Hero","Elixir 88 100 + 20 ml","Arabia Code"],
+"BOROUJ": ["Perlador","Kit Collection 8 x 10 ml"],
+"BHARARA": ["King EDP 100 ml","King Parfum","King Gold Edition","King Soleil","Pharaoh Ramsses I","Pharaoh Ramsses II","Rome Pour Homme","Rome Pour Femme","Rome Paradoxe","Rome Extradose Pour Homme","Rey de Reyes"],
+"ANFAR": ["Dubai Chocolate Pistacho"],
+"RAVE": ["Now Women","Now Men (Negro)","Now Rage","Nardo Red","Luxure Man"],
+"KHADLAJ": ["Island"],
+"DUMONT": ["Nitro Red","Nitro Red Intensely"],
+"RIIFFS": ["Momento"],
+"RUE BROCA": ["Luminous Pour Femme"],
+"L'AFFAIR": ["Summer Shockwave"],
+"NUSUK": ["Ateeq"],
+"ZAKAT": ["World Cup"]
+},
+designer: {
+"JEAN PAUL GAULTIER": ["Le Beau Le Parfum 125 ml","Scandal Le Parfum 100 ml","Le Male Elixir 125 ml","Le Male Le Parfum 125 ml"],
+"DIOR": ["Sauvage 200 ml","Dior Homme Intense 100 ml"],
+"DOLCE & GABBANA": ["The One EDP","Light Blue Pour Femme 200 ml","Light Blue Capri In Love"],
+"VIKTOR & ROLF": ["Spicebomb","Spicebomb Extreme","Spicebomb Infrared","Spicebomb Night Vision"],
+"YVES SAINT LAURENT": ["Y EDP 100 ml","Libre EDP 100 ml","MYSLF Le Parfum"],
+"ARMANI": ["Code EDP 100 ml","Stronger With You Intensely"],
+"VERSACE": ["Eros Flame 200 ml","Eros Energy 200 ml","Eros 100 ml","Dylan Blue 200 ml"],
+"AZZARO": ["The Most Wanted EDP Intense","The Most Wanted Parfum","The Most Wanted Forever Elixir"],
+"PRADA": ["L'Homme Intense 100 ml"],
+"GUERLAIN": ["L'Homme Idéal EDT"],
+"GIVENCHY": ["Ange Ou Démon Le Secret"],
+"VALENTINO": ["Uomo Born In Roma Intense"],
+"CARTIER": ["Pasha Edition Noire Sport"],
+"CAROLINA HERRERA": ["Chic For Men 60 ml"],
+"BENTLEY": ["For Men Intense 100 ml"],
+"LANCÔME": ["La Vie Est Belle EDP 100 ml"],
+"MUGLER": ["Alien EDP 90 ml"],
+"BILLIE EILISH": ["Eilish EDP"],
+"SABRINA CARPENTER": ["Sweet Tooth Me Espresso","Sweet Tooth (Rosa)","Sweet Tooth Caramel Dream","Sweet Tooth Cherry Baby"]
+},
+niche: {
+"XERJOFF": ["Alexandria II","Tony Iommi Monkey Special","Naxos","Accento","Erba Pura","Erba Gold","Torino 21","K Bridge Club"],
+"CREED": ["Aventus","Green Irish Tweed"],
+"MANCERA": ["French Riviera","Instant Crush","Xplicit Vanilla","Roses Vanilla","Cedrat Boise","Red Tobacco"],
+"MONTALE": ["Arabians Tonka","Starry Nights","Wood On Fire","Sensual Instinct","Dark Vanilla","Intense Cafe"],
+"NISHANE": ["Ani 100 ml","Safran Colognise","Fan Your Flames"],
+"TIZIANA TERENZI": ["Kirke"],
+"LORENZO PAZZAGLIA": ["Summer Hammer"],
+"MAISON MARGIELA – REPLICA": ["By The Fireplace"],
+"CASAMORATI": ["Quattro Pizzi"],
+"JO MILANO": ["Wildcard","Full House","Royale","Moon","Rouge Extrait","Parfum Cofret I","Parfum Cofret II"],
+"HERMÈS": ["Terre d'Hermès Eau Givrée"]
+},
+body: {
+"VICTORIA'S SECRET": ["Sin brillo","Con brillo (Shimmer)","Consultar modelos disponibles"]
+}
+};
+
+function render(sectionId, data){
+  const root=document.getElementById(sectionId);
+  Object.entries(data).forEach(([brand, products])=>{
+    const details=document.createElement("details");
+    details.className="brand";
+    details.open=false;
+    const summary=document.createElement("summary");
+    summary.textContent="▪️ "+brand;
+    details.appendChild(summary);
+    const wrap=document.createElement("div");
+    wrap.className="products";
+    products.forEach(p=>{
+      const item=document.createElement("a");
+      item.className="product";
+      item.dataset.search=(brand+" "+p).toLowerCase();
+      item.textContent="• "+p;
+      const message = `Hola, quiero consultar por el perfume ${p} de ${brand}. ¿Me pueden informar precio y disponibilidad?`;
+      item.href = "https://wa.me/5493413070740?text=" + encodeURIComponent(message);
+      item.target = "_blank";
+      item.rel = "noopener noreferrer";
+      wrap.appendChild(item);
+    });
+    details.appendChild(wrap);
+    root.appendChild(details);
+  });
+}
+render("arabic",catalogs.arabic);
+render("designer",catalogs.designer);
+render("niche",catalogs.niche);
+render("bodySplash",catalogs.body);
+
+const input=document.getElementById("search");
+input.addEventListener("input",()=>{
+  const q=input.value.trim().toLowerCase();
+  document.querySelectorAll(".brand").forEach(brand=>{
+    const text=brand.innerText.toLowerCase();
+    const products=[...brand.querySelectorAll(".product")];
+    let visible=0;
+    products.forEach(p=>{
+      const ok=!q || p.dataset.search.includes(q) || brand.querySelector("summary").innerText.toLowerCase().includes(q);
+      p.style.display=ok?"block":"none";
+      if(ok) visible++;
+    });
+    brand.style.display=visible?"block":"none";
+    if(q && visible) brand.open=true;
+  });
+});
+</script>
+</body>
+</html>
